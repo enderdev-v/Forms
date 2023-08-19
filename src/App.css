@@ -1,0 +1,32 @@
+/* ===== Google Font Import - Poppins ===== */
+.input {
+    display: flex;
+    height: 55px;
+    background: #fff;
+    padding: 20px;
+    font-size: 18px;
+    margin: 3vh;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 500;
+    color: #5f82e3;
+    font-family: Arial;
+    margin: 3vh;
+}
+
+.desc {
+    margin: 3vh;
+    font-size: 20px;
+}
