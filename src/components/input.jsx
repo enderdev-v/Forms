@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./input.css";
 import forms from "../assets/formulas";
 
-// eslint-disable-next-line react/prop-types
 function Input({ Formulas }) {
 
     const [togle, setTogle] = useState(false);
@@ -11,13 +10,13 @@ function Input({ Formulas }) {
 
 
     const fn = (num) => {
-        let exp =  /0\d/;
+        let exp =  /^0\d+/;
         let formula;
         if (Formulas === "Temperaturas") {
             formula = forms[text][0];
         }
         const x = num === "" ? 0 : num;
-        if (num.includes("00") || exp.test(num)) return "Formato no valido";
+        if (`${num}`.startsWith("00") || exp.test(num)) return "Formato no valido";
         const form = formula.replace("x", `${x}`);
         return eval(form);
     };
@@ -35,7 +34,6 @@ function Input({ Formulas }) {
                 <div className={active}>
                     <div className="select-btn" onClick={() => setTogle(!togle)}>
                         <span className="sBtn-text">{text}</span>
-                        <i className=""></i>
                     </div>
                     <ul className="options">
                         <button className="option" onClick={() => setText("Fahrenheit")}>

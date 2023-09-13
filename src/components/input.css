@@ -1,20 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: #E3F2FD;
-}
-
-/* Input */
-
 .input {
-    display: flex;
     height: 55px;
     background: #fff;
     padding: 20px;
@@ -28,7 +12,7 @@ body {
 
 .items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
 
@@ -44,6 +28,7 @@ body {
     margin: 3vh;
     font-size: 20px;
 }
+
 /* Menu */
 .select-menu {
     width: 380px;
@@ -116,4 +101,44 @@ body {
 .option .option-text {
     font-size: 18px;
     color: #333;
+}
+
+@media only screen and (max-width: 600px),
+(max-width: 400px),
+(max-width: 360px) {
+    .input {
+        height: 55px;
+        background: #fff;
+        padding: 20px;
+        font-size: 18px;
+        margin: 3vh;
+        border-radius: 5px;
+        align-items: center;
+        width: 35vh
+    }
+
+    .items {
+        display: block
+    }
+
+    .select-menu {
+        width: 190px;
+        margin: 3vh;
+    }
+
+    .select-menu .select-btn {
+        display: flex;
+        height: 55px;
+        background: #fff;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        border-radius: 8px;
+        align-items: center;
+        margin: 2vh;
+        cursor: pointer;
+        justify-content: space-between;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        width: 35vh;
+    }
 }
